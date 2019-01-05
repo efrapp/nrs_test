@@ -18,7 +18,7 @@ export class SwapiProvider {
 
   getFilms(){
     return new Promise(resolve => { 
-      this.http.get(this.swapiUrl + '/films/?page=1').subscribe(data => {
+      this.http.get(this.swapiUrl + '/films/').subscribe(data => {
         resolve(data),
         err => {
           console.log(err);
@@ -40,7 +40,7 @@ export class SwapiProvider {
 
   getVehicles(){
     return new Promise(resolve => { 
-      this.http.get('/vehicles').subscribe(data => {
+      this.http.get(this.swapiUrl + '/vehicles/').subscribe(data => {
         resolve(data),
         err => {
           console.log(err);
